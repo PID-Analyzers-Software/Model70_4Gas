@@ -49,17 +49,14 @@ void SSD1306RunMenuRenderer::render(Menu* menu)
   m_display->setColor(WHITE);
   m_display->setTextAlignment(TEXT_ALIGN_CENTER);
   m_display->setFont(ArialMT_Plain_10);
-  m_display->drawString(64, 0, "13:00       PID         95%");
+  m_display->drawString(64, 0, "13:00       H2            95%");
   m_display->drawLine(0, 14, 256, 14);
-  //m_display->setFont(ArialMT_Plain_16);
-  m_display->setTextAlignment(TEXT_ALIGN_LEFT);
-  m_display->drawString(5, 20, "CG: 1.1%");
-  m_display->drawString(62 , 20, "H2S: 0.1ppm");
-    m_display->drawLine(0, 35, 256, 35);
-    m_display->drawLine(58, 14, 58, 60);
-
-  m_display->drawString(0, 40, "CO: 5.2ppm");
-  m_display->drawString(65, 40, "O2:  20.5%");
+  m_display->setFont(ArialMT_Plain_24);
+  m_display->drawString(60, 18, "5.2");
+  m_display->setFont(ArialMT_Plain_10);
+  m_display->drawString(90, 30, "ppm");
+  m_display->drawLine(0, 49, 256, 49);
+  m_display->drawString(64, 51, "AL.        TCD        LOG");
   m_display->display();
 
 }
